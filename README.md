@@ -20,6 +20,25 @@ For basic typst syntax, check this template as a reference, it's super easy to u
 
 For advanced topics, please refer to [official reference](https://typst.app/docs/reference/) by typst.
 
+## GitHub Actions Deployment
+
+This repository includes a GitHub Actions workflow that automatically:
+1. Compiles the CV template to a PDF using Typst
+2. Uploads the generated PDF to an AWS S3 bucket
+
+### Setting Up GitHub Secrets
+
+To use the automatic S3 deployment, you need to add the following secrets to your GitHub repository:
+
+| Secret Name | Description |
+|-------------|-------------|
+| `AWS_ACCESS_KEY_ID` | Your AWS access key with S3 permissions |
+| `AWS_SECRET_ACCESS_KEY` | Your AWS secret access key |
+| `AWS_REGION` | The AWS region where your bucket is located (e.g., `us-east-1`) |
+| `S3_BUCKET` | The name of your S3 bucket (e.g., `my-resume-bucket`) |
+
+You can add these secrets in your GitHub repository under Settings → Secrets and variables → Actions → New repository secret.
+
 ## Showcases
 
 ### Sample CV
