@@ -45,7 +45,7 @@
 #link("mailto:luohycs@gmail.com")[luohycs\@gmail.com] |
 #link("https://github.com/luohy15")[github.com/luohy15] |
 #link("https://luohy15.com")[luohy15.com] |
-#link("https://linkedin.com/in/luohy15")[linkedin.com/in/luohy15]
+#link("https://linkedin.com/in/huayiluo")[linkedin.com/in/huayiluo]
 
 == Education
 #chiline()
