@@ -40,51 +40,51 @@
 // Uncomment the following lines to add the optional prompt at the bottom of the first CV page
 // #continuescvpage()
 
-= Alex Chi
+= Huayi Luo
 
-skyzh\@cmu.edu |
-#link("https://github.com/skyzh")[github.com/skyzh] | #link("https://skyzh.dev")[skyzh.dev]
+#link("mailto:luohycs@gmail.com")[luohycs\@gmail.com] |
+#link("https://github.com/luohy15")[github.com/luohy15] |
+#link("https://luohy15.com")[luohy15.com] |
+#link("https://linkedin.com/in/luohy15")[linkedin.com/in/luohy15]
 
 == Education
 #chiline()
 
-#link("https://typst.app/")[*#lorem(2)*] #h(1fr) 2333/23 -- 2333/23 \
-#lorem(5) #h(1fr) #lorem(2) \
-- #lorem(10)
-
-*#lorem(2)* #h(1fr) 2333/23 -- 2333/23 \
-#lorem(5) #h(1fr) #lorem(2) \
-- #lorem(10)
+*Tsinghua University* #h(1fr) 2015/09 -- 2019/06 \
+Bachelor of Engineering in Computer Science and Technology #h(1fr)  Beijing, China \
+- Courses: Software Engineering, Operating Systems, Database Systems, etc.
 
 == Work Experience
 #chiline()
 
-*#lorem(2)* #h(1fr) 2333/23 -- 2333/23 \
-#lorem(5) #h(1fr) #lorem(2) \
-- #lorem(20)
-- #lorem(30)
-- #lorem(40)
+*Lingxin Intelligence*, acquired by Zhipu AI #h(1fr) 2023/02 -- Present \
+Full Stack Engineer #h(1fr) Beijing, China \
+- Developed core backend services for AI chat applications with real-time chat capabilities and image/video generation, handling conversations, bot management across multiple clients.
+- Built a deployment pipeline supporting diverse workloads (both GPU and CPU), enabling co-workers to deploy applications without manual intervention.
+- Managed cloud infrastructure and executed minimal-downtime database migration with continuous production availability.
 
-*#lorem(2)* #h(1fr) 2333/23 -- 2333/23 \
-#lorem(5) #h(1fr) #lorem(2) \
-- #lorem(20)
-- #lorem(30)
-- #lorem(40)
+*Alibaba Cloud* #h(1fr) 2021/05 -- 2022/07 \
+Senior Development Engineer #h(1fr) Beijing, China \
+- Led development of Alibaba Cloud database internal admin panel, optimizing high-frequency slow operations.
+- Developed metadata API services to support features like serverless database and rebuilt workflow service by extracting common database operations from legacy system.
 
-== Projects
+*BizSeer Technology* #h(1fr) 2019/07 -- 2021/04 \
+Full Stack Engineer #h(1fr) Beijing, China \
+- Built reusable chart components for visualizing metrics, logs, and traces.
+- Contributed to API gateway development for central authentication and service routing.
+
+== Open-Source Contributions
 #chiline()
 
-*#lorem(2)* #h(1fr) 2333/23 -- 2333/23 \
-#lorem(5) #h(1fr) #lorem(2) \
-- #lorem(20)
-- #lorem(30)
-- #lorem(40)
+*y-Series (cli/gui/server)* #link("https://github.com/luohy15/y-gui")[luohy15/y-gui] #h(1fr) Since 2025/02 \
+- Developed a personal use chat application ecosystem with CLI, GUI, and server components
+- Built y-gui (TypeScript web app), y-cli (Python terminal app), and y-server (TypeScript) with Model Context Protocol (MCP) client and server support
 
-*#lorem(2)* #h(1fr) 2333/23 -- 2333/23 \
-#lorem(5) #h(1fr) #lorem(2) \
-- #lorem(20)
-- #lorem(30)
-- #lorem(40)
+*JuiceFS, Contributor* #link("https://github.com/juicedata/juicefs")[juicedata/juicefs] #h(1fr) 2021, 2023 \
+- Contributed to JuiceFS, a distributed POSIX file system built on Redis and S3
+- Implemented support for path-style URL for S3 and S3-compatible storage
+- Upgraded CI workflow to use Go oldstable version and fixed deprecated packages
+
 
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated("Mar 22, 2025")
+#lastupdated("May, 2025")
