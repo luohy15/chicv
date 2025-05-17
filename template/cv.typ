@@ -52,7 +52,6 @@
 
 *Tsinghua University* #h(1fr) 2015/09 -- 2019/06 \
 Bachelor of Engineering in Computer Science and Technology #h(1fr)  Beijing, China \
-- Courses: Software Engineering, Operating Systems, Database Systems, etc.
 
 == Work Experience
 #chiline()
