@@ -23,6 +23,11 @@ jobs:
         with:
           typst-version: latest
 
+      - name: Install Chinese fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
+
       - name: Build PDFs
         run: |
           typst compile template/cv.typ cv.pdf

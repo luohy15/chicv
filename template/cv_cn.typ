@@ -4,6 +4,9 @@
 
 #show link: underline
 
+// Set font for Chinese text
+#set text(font: ("Noto Sans CJK SC", "Noto Serif CJK SC", "Linux Libertine"))
+
 // 取消以下注释来调整文字大小
 // 推荐的简历文字大小为 `10pt` 到 `12pt`
 // #set text(
