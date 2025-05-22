@@ -63,7 +63,7 @@ Full Stack Engineer #h(1fr) Beijing, China \
 - Managed cloud infrastructure and executed minimal-downtime database migration with continuous production availability.
 
 *Alibaba Cloud* #h(1fr) 2021/05 -- 2022/07 \
-Senior Development Engineer #h(1fr) Beijing, China \
+Senior Development Engineer, Cloud Database Team #h(1fr) Beijing, China \
 - Led development of Alibaba Cloud database internal admin panel, optimizing high-frequency slow operations.
 - Developed metadata API services to support features like serverless database and rebuilt workflow service by extracting common database operations from legacy system.
 
