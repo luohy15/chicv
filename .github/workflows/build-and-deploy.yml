@@ -51,3 +51,10 @@ jobs:
           aws s3 cp cv.pdf s3://${{ secrets.R2_BUCKET_NAME }}/cv.pdf
           aws s3 cp cv_cn.pdf s3://${{ secrets.R2_BUCKET_NAME }}/cv_cn.pdf
 
+      - name: Purge Cloudflare Cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"files":["https://${{ secrets.DOMAIN }}/cv.pdf","https://${{ secrets.DOMAIN }}/cv_cn.pdf"]}'
+
