@@ -56,7 +56,7 @@ Bachelor of Engineering in Computer Science and Technology #h(1fr)  Beijing, Chi
 == Work Experience
 #chiline()
 
-*Lingxin Intelligence*, acquired by Zhipu AI #h(1fr) 2023/02 -- Present \
+*Lingxin Intelligence*, acquired by Zhipu AI #h(1fr) 2023/02 -- 2025/07 \
 Full Stack Engineer #h(1fr) Beijing, China \
 - Developed core backend services for AI chat applications with real-time chat capabilities and image/video generation, handling conversations, bot management across multiple clients.
 - Built a deployment pipeline supporting diverse workloads (both GPU and CPU), enabling co-workers to deploy applications without manual intervention.
@@ -86,4 +86,4 @@ Full Stack Engineer #h(1fr) Beijing, China \
 
 
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated("May, 2025")
+#lastupdated("July, 2025")
