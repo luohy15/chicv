@@ -33,20 +33,21 @@ jobs:
           typst compile template/cv.typ cv.pdf
           typst compile template/cv_cn.typ cv_cn.pdf
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
-
-      - name: Upload PDFs to S3
+      - name: Install AWS CLI
         run: |
-          aws s3 cp cv.pdf s3://${{ secrets.S3_BUCKET }}/cv.pdf
-          aws s3 cp cv_cn.pdf s3://${{ secrets.S3_BUCKET }}/cv_cn.pdf
-
-      - name: Create CloudFront Invalidation
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
+          
+      - name: Configure AWS CLI for R2
         run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths "/cv.pdf" "/cv_cn.pdf"
+          aws configure set aws_access_key_id ${{ secrets.R2_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          aws configure set endpoint_url https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+          aws configure set region auto
+
+      - name: Upload PDFs to R2
+        run: |
+          aws s3 cp cv.pdf s3://${{ secrets.R2_BUCKET_NAME }}/cv.pdf
+          aws s3 cp cv_cn.pdf s3://${{ secrets.R2_BUCKET_NAME }}/cv_cn.pdf
+
