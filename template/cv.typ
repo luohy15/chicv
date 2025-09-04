@@ -56,6 +56,10 @@ Bachelor of Engineering in Computer Science and Technology #h(1fr)  Beijing, Chi
 == Work Experience
 #chiline()
 
+*Alpha Vantage* #h(1fr) 2025/07 -- Present \
+Software Engineer #h(1fr) Remote \
+- Building cloud infrastructure for realtime financial data and LLM-based data processing.
+
 *Lingxin Intelligence*, acquired by Zhipu AI #h(1fr) 2023/02 -- 2025/07 \
 Full Stack Engineer #h(1fr) Beijing, China \
 - Developed core backend services for AI chat applications with real-time chat capabilities and image/video generation, handling conversations, bot management across multiple clients.
@@ -75,9 +79,15 @@ Full Stack Engineer #h(1fr) Beijing, China \
 == Open-Source Contributions
 #chiline()
 
-*y-Series (cli/gui/server)* #link("https://github.com/luohy15/y-gui")[luohy15/y-gui] #h(1fr) Since 2025/02 \
-- Developed a personal use chat application ecosystem with CLI, GUI, and server components
-- Built y-gui (TypeScript web app), y-cli (Python terminal app), and y-server (TypeScript) with Model Context Protocol (MCP) client and server support
+*Alpha Vantage MCP Server* #link("https://github.com/alphavantage/alpha_vantage_mcp")[alphavantage/alpha_vantage_mcp] #h(1fr) 2025 \
+- Built the official Alpha Vantage MCP server enabling LLMs to access real-time financial data through Model Context Protocol
+- Implemented comprehensive financial APIs covering stocks, options, forex, cryptocurrencies, and economic indicators
+- Deployed as HTTP MCP server with OAuth and API key authentication, supporting multiple platforms
+
+*y-Series (cli/gui/server/router)* #link("https://github.com/luohy15/y-gui")[luohy15/y-gui] #h(1fr) Since 2025/02 \
+- Developed a personal use chat application ecosystem with CLI, GUI, server, and API router components
+- Built y-gui (TypeScript web app), y-cli (Python terminal app), y-server (TypeScript), and y-router (Cloudflare Workers)
+- Implemented Model Context Protocol (MCP) client and server support with API translation layer for OpenRouter integration
 
 *JuiceFS, Contributor* #link("https://github.com/juicedata/juicefs")[juicedata/juicefs] #h(1fr) 2021, 2023 \
 - Contributed to JuiceFS, a distributed POSIX file system built on Redis and S3
@@ -86,4 +96,4 @@ Full Stack Engineer #h(1fr) Beijing, China \
 
 
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated("July, 2025")
+#lastupdated("September, 2025")
