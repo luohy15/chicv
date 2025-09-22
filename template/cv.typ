@@ -61,36 +61,43 @@ Software Engineer #h(1fr) Remote \
 - Building cloud infrastructure for realtime financial data and LLM-based data processing.
 
 *Lingxin Intelligence*, acquired by Zhipu AI #h(1fr) 2023/02 -- 2025/07 \
-Full Stack Engineer #h(1fr) Beijing, China \
+Software Engineer #h(1fr) Beijing, China \
 - Developed core backend services for AI chat applications with real-time chat capabilities and image/video generation, handling conversations, bot management across multiple clients.
 - Built a deployment pipeline supporting diverse workloads (both GPU and CPU), enabling co-workers to deploy applications without manual intervention.
 - Managed cloud infrastructure and executed minimal-downtime database migration with continuous production availability.
 
 *Alibaba Cloud* #h(1fr) 2021/05 -- 2022/07 \
-Senior Development Engineer, Cloud Database Team #h(1fr) Beijing, China \
+Senior Software Engineer, Cloud Database Team #h(1fr) Beijing, China \
 - Led development of Alibaba Cloud database internal admin panel, optimizing high-frequency slow operations.
 - Developed metadata API services to support features like serverless database and rebuilt workflow service by extracting common database operations from legacy system.
 
 *BizSeer Technology* #h(1fr) 2019/07 -- 2021/04 \
-Full Stack Engineer #h(1fr) Beijing, China \
-- Built reusable chart components for visualizing metrics, logs, and traces.
+Software Engineer #h(1fr) Beijing, China \
+- Developed AI for Ops applications, building reusable chart components for visualizing metrics, logs, and traces.
 - Contributed to API gateway development for central authentication and service routing.
+
+*Tencent* #h(1fr) 2018/07 -- 2018/08 \
+Software Engineering Intern, Technology and Engineering Group #h(1fr) Shenzhen, China \
+- Developed AI for Ops applications at one of China's leading technology companies.
+
+== Awards
+#chiline()
+
+*Freshman Scholarship*, Tsinghua University, 2015. 300 at Tsinghua.
+
+*Gold Medal*, Chinese Chemistry Olympiad, 2014. 50 in China.
 
 == Open-Source Contributions
 #chiline()
 
 *Alpha Vantage MCP Server* #link("https://github.com/alphavantage/alpha_vantage_mcp")[alphavantage/alpha_vantage_mcp] #h(1fr) 2025 \
 - Built the official Alpha Vantage MCP server enabling LLMs to access real-time financial data through Model Context Protocol
-- Implemented comprehensive financial APIs covering stocks, options, forex, cryptocurrencies, and economic indicators
-- Deployed as HTTP MCP server with OAuth and API key authentication, supporting multiple platforms
 
-*y-Series (cli/gui/server/router)* #link("https://github.com/luohy15/y-gui")[luohy15/y-gui] #h(1fr) Since 2025/02 \
+*y-Series (cli/gui/server/router)* #link("https://github.com/luohy15")[luohy15] *600+ stars total* #h(1fr) Since 2025/02 \
 - Developed a personal use chat application ecosystem with CLI, GUI, server, and API router components
-- Built y-gui (TypeScript web app), y-cli (Python terminal app), y-server (TypeScript), and y-router (Cloudflare Workers)
 - Implemented Model Context Protocol (MCP) client and server support with API translation layer for OpenRouter integration
 
 *JuiceFS, Contributor* #link("https://github.com/juicedata/juicefs")[juicedata/juicefs] #h(1fr) 2021, 2023 \
-- Contributed to JuiceFS, a distributed POSIX file system built on Redis and S3
 - Implemented support for path-style URL for S3 and S3-compatible storage
 - Upgraded CI workflow to use Go oldstable version and fixed deprecated packages
 
