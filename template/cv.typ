@@ -80,18 +80,15 @@ Software Engineer #h(1fr) Beijing, China \
 Software Engineering Intern, Technology and Engineering Group #h(1fr) Shenzhen, China \
 - Developed AI for Ops applications at one of China's leading technology companies.
 
-== Awards
-#chiline()
-
-*Freshman Scholarship*, Tsinghua University, 2015. 300 at Tsinghua.
-
-*Gold Medal*, Chinese Chemistry Olympiad, 2014. 50 in China.
-
 == Open-Source Contributions
 #chiline()
 
 *Alpha Vantage MCP Server* #link("https://github.com/alphavantage/alpha_vantage_mcp")[alphavantage/alpha_vantage_mcp] #h(1fr) 2025 \
 - Built the official Alpha Vantage MCP server enabling LLMs to access real-time financial data through Model Context Protocol
+
+*TradingAgents, Contributor* #link("https://github.com/TauricResearch/TradingAgents")[TauricResearch/TradingAgents] #h(1fr) 2025 \
+- Added Alpha Vantage API integration with comprehensive support for stock data, technical indicators, fundamental data, and news sentiment
+- Refactored data provider architecture, extracting specialized utility modules from monolithic codebase for improved modularity
 
 *y-Series (cli/gui/server/router)* #link("https://github.com/luohy15")[luohy15] *600+ stars total* #h(1fr) Since 2025/02 \
 - Developed a personal use chat application ecosystem with CLI, GUI, server, and API router components
