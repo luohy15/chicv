@@ -5,18 +5,51 @@ on:
     branches: [main, master]
     paths:
       - 'template/**'
-      - 'template/cv.typ'
-      - 'template/cv_cn.typ'
       - 'lib.typ'
       - 'typst.toml'
       - '.github/workflows/build-and-deploy.yml'
 
+env:
+  AWS_REGION: us-east-1
+
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: prod
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Parse config
+        run: |
+          CONFIG='${{ secrets.CONFIG }}'
+          echo "$CONFIG" | jq -r 'to_entries | .[] | "\(.key)=\(.value)"' >> $GITHUB_ENV
+          echo "$CONFIG" | jq -r '.[]' | while read -r value; do
+            [ -n "$value" ] && echo "::add-mask::$value"
+          done
+
+      - name: Validate required config
+        run: |
+          if [ -z "$CDN_BUCKET_NAME" ]; then
+            echo "::error::CDN_BUCKET_NAME is required but not set in CONFIG secret"
+            exit 1
+          fi
+          if [ -z "$CDN_DISTRIBUTION_ID" ]; then
+            echo "::error::CDN_DISTRIBUTION_ID is required but not set in CONFIG secret"
+            exit 1
+          fi
+          echo "Deploying to bucket: $CDN_BUCKET_NAME"
 
       - name: Setup Typst
         uses: typst-community/setup-typst@v3
@@ -33,28 +66,13 @@ jobs:
           typst compile template/cv.typ cv.pdf
           typst compile template/cv_cn.typ cv_cn.pdf
 
-      - name: Install AWS CLI
+      - name: Upload PDFs to S3
         run: |
-          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip awscliv2.zip
-          sudo ./aws/install --update
-          
-      - name: Configure AWS CLI for R2
-        run: |
-          aws configure set aws_access_key_id ${{ secrets.R2_ACCESS_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          aws configure set endpoint_url https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
-          aws configure set region auto
+          aws s3 cp cv.pdf s3://$CDN_BUCKET_NAME/cv.pdf
+          aws s3 cp cv_cn.pdf s3://$CDN_BUCKET_NAME/cv_cn.pdf
 
-      - name: Upload PDFs to R2
+      - name: Invalidate CloudFront cache
         run: |
-          aws s3 cp cv.pdf s3://${{ secrets.R2_BUCKET_NAME }}/cv.pdf
-          aws s3 cp cv_cn.pdf s3://${{ secrets.R2_BUCKET_NAME }}/cv_cn.pdf
-
-      - name: Purge Cloudflare Cache
-        run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
-            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            --data '{"files":["https://${{ secrets.DOMAIN }}/cv.pdf","https://${{ secrets.DOMAIN }}/cv_cn.pdf"]}'
-
+          aws cloudfront create-invalidation \
+            --distribution-id "$CDN_DISTRIBUTION_ID" \
+            --paths /cv.pdf /cv_cn.pdf
