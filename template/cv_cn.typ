@@ -47,7 +47,7 @@
 == 职业概述
 #chiline()
 
-专注于 AI 开发者工具、Agent 系统和生产基础设施的软件工程师。构建并维护 `y-agent`，一个围绕 coding agents 打造的个人 AI agent 系统，覆盖 CLI / web / Telegram 入口、工具调用工作流、记忆、技能、可追踪的 subagent 分发，以及可由人介入引导的长时间运行会话。具备 AI 聊天产品、MCP 服务器、多 Agent 工作流、云基础设施，以及小团队快速迭代经验。
+专注于 AI 开发者工具、Agent 系统和生产基础设施的软件工程师，构建过 AI 聊天产品、MCP 服务器、多 Agent 工作流和个人 AI agent 系统 `y-agent`。
 
 == 工作经历
 #chiline()
@@ -56,18 +56,18 @@
 Software Engineer #h(1fr) 远程 \
 - 构建面向实时金融数据和 LLM 数据处理的云基础设施。
 - 开发 MCP 兼容的金融数据接口，服务 LLM 客户端和 Agent 工作流。
-- 将 Alpha Vantage 的 TradingAgents fork 打造成可部署的多 Agent LLM 交易分析产品，打通 Alpha Vantage 数据流、API、worker 和 web 入口。
+- 将 Alpha Vantage 的 TradingAgents fork 打造成可部署的多 Agent LLM 交易分析产品。
 
 *聆心智能*，后被智谱 AI 收购 #h(1fr) 2023/02 -- 2025/07 \
 Software Engineer #h(1fr) 北京，中国 \
-- 开发 AI 聊天应用后端服务，支持实时聊天、图像/视频生成、会话和机器人管理。
-- 构建 GPU/CPU 部署流水线，让同事无需手动介入即可部署应用。
+- 开发 AI 聊天应用后端服务，支持实时聊天、图像/视频生成和机器人管理。
+- 构建 GPU/CPU 部署流水线，支持应用自动部署。
 - 管理云基础设施，并执行低停机数据库迁移，保持生产环境持续可用。
 
 *Alibaba Cloud* #h(1fr) 2021/05 -- 2022/07 \
 Senior Software Engineer，Cloud Database Team #h(1fr) 北京，中国 \
 - 主导开发 Alibaba Cloud 数据库内部管理面板，优化高频慢操作。
-- 开发 serverless database 元数据 API 服务，并通过抽取通用数据库操作重建工作流服务。
+- 开发 serverless database 元数据 API 服务，并重建工作流服务。
 
 *BizSeer Technology* #h(1fr) 2019/07 -- 2021/04 \
 Software Engineer #h(1fr) 北京，中国 \
@@ -77,17 +77,17 @@ Software Engineer #h(1fr) 北京，中国 \
 #chiline()
 
 *y-agent：个人 AI Agent 系统* #link("https://github.com/luohy15/y-agent")[luohy15/y-agent] #h(1fr) 始于 2025/02 \
-- 构建个人 AI agent 系统，将 coding agents 扩展到 todos、notes、calendar、links、finance、email 和知识管理等日常工作流。
-- 设计 session-tree 编排，包含 manager / dev / plan / impl / review 会话、可追踪分发、callbacks，以及可由人介入引导的长时间运行会话。
-- 实现基于技能的上下文注入、持久记忆、CLI-first 工具、Telegram / web 界面、MCP 集成，以及 OpenRouter 兼容的模型路由。
+- 构建个人 AI agent 系统，将 coding agents 扩展到 todos、notes、calendar、finance 和知识管理等工作流。
+- 设计 session-tree 编排，支持 manager / dev / plan / impl / review 会话、可追踪分发和人工介入。
+- 实现技能上下文、持久记忆、CLI-first 工具、Telegram / web 界面、MCP 集成和模型路由。
 
 *Alpha Vantage MCP Server* #link("https://github.com/alphavantage/alpha_vantage_mcp")[alphavantage/alpha_vantage_mcp] #h(1fr) 2025 \
-- 构建官方 Alpha Vantage MCP server，使 LLM 和 Agent 工作流可通过 Model Context Protocol 访问实时与历史金融数据。
-- 设计渐进式工具发现，在保留广泛金融数据工具覆盖的同时降低 context/token 成本。
+- 构建官方 Alpha Vantage MCP server，使 LLM 和 Agent 可访问实时与历史金融数据。
+- 设计渐进式工具发现，降低 context/token 成本。
 
 *TradingAgents，Contributor* #link("https://github.com/TauricResearch/TradingAgents")[TauricResearch/TradingAgents] #h(1fr) 2025 \
-- 添加 Alpha Vantage API 集成，全面支持 stock data、technical indicators、fundamental data 和 news sentiment。
-- 重构 data provider 架构，从单体代码中抽取专用 utility modules，提升模块化程度。
+- 添加 Alpha Vantage API 集成，支持 stock data、technical indicators、fundamental data 和 news sentiment。
+- 重构 data provider 架构，抽取专用 utility modules。
 
 == 教育背景
 #chiline()
