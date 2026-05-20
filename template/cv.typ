@@ -47,12 +47,6 @@
 #link("https://luohy15.com")[luohy15.com] |
 #link("https://linkedin.com/in/huayiluo")[linkedin.com/in/huayiluo]
 
-== Education
-#chiline()
-
-*Tsinghua University* #h(1fr) 2015/09 -- 2019/06 \
-Bachelor of Engineering in Computer Science and Technology #h(1fr)  Beijing, China \
-
 == Work Experience
 #chiline()
 
@@ -106,6 +100,12 @@ Software Engineering Intern, Technology and Engineering Group #h(1fr) Shenzhen, 
 *JuiceFS, Contributor* #link("https://github.com/juicedata/juicefs")[juicedata/juicefs] #h(1fr) 2021, 2023 \
 - Implemented support for path-style URL for S3 and S3-compatible storage
 - Upgraded CI workflow to use Go oldstable version and fixed deprecated packages
+
+== Education
+#chiline()
+
+*Tsinghua University* #h(1fr) 2015/09 -- 2019/06 \
+Bachelor of Engineering in Computer Science and Technology #h(1fr)  Beijing, China \
 
 
 // Feel free to change the date below to the last time you updated your CV
