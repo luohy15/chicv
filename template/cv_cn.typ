@@ -44,6 +44,11 @@
 #link("https://luohy15.com")[luohy15.com] |
 #link("https://linkedin.com/in/huayiluo")[linkedin.com/in/huayiluo]
 
+== 职业概述
+#chiline()
+
+专注于 AI 开发者工具、Agent 系统和生产基础设施的软件工程师。构建并维护 `y-agent`，一个围绕 coding agents 打造的个人 AI agent 系统，覆盖 CLI / web / Telegram 入口、工具调用工作流、记忆、技能、可追踪的 subagent 分发，以及可由人介入引导的长时间运行会话。具备 AI 聊天产品、MCP 服务器、多 Agent 工作流、云基础设施，以及小团队快速迭代经验。
+
 == 工作经历
 #chiline()
 
@@ -87,8 +92,8 @@ Software Engineer #h(1fr) 北京，中国 \
 == 教育背景
 #chiline()
 
-*Tsinghua University* #h(1fr) 2015/09 -- 2019/06 \
-计算机科学与技术 工学学士 #h(1fr)  北京，中国 \
+*清华大学* #h(1fr) 2015/09 -- 2019/06 \
+计算机科学与技术 工学学士 #h(1fr) 北京，中国 \
 
 
 // 可以随意更改下面的日期为您最后更新简历的时间
