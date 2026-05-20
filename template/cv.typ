@@ -6,9 +6,9 @@
 
 // Uncomment the following lines to adjust the size of text
 // The recommend resume text size is from `10pt` to `12pt`
-// #set text(
-//   size: 12pt,
-// )
+#set text(
+  size: 10.5pt,
+)
 
 // Feel free to change the margin below to best fit your own CV
 #set page(
@@ -17,8 +17,9 @@
 
 
 #set par(justify: true)
+#set list(spacing: 0pt)
 
-#let chiline() = { v(-3pt); line(length: 100%); v(-5pt) }
+#let chiline() = { v(-4pt); line(length: 100%); v(-7pt) }
 
 #let continuescvpage() = {
   place(
