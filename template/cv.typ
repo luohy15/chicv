@@ -48,7 +48,7 @@
 Software Engineer #h(1fr) Remote \
 - Building cloud infrastructure for real-time financial data and LLM-based data processing.
 - Developed MCP-compatible financial data interfaces for LLM clients and agentic workflows.
-- Worked on production data services where correctness, latency, and tool-call ergonomics affect downstream agent quality.
+- Built Alpha Vantage's TradingAgents fork into a deployable multi-agent LLM trading analysis product, integrating Alpha Vantage dataflows with API, worker, and web surfaces.
 
 *Lingxin Intelligence*, acquired by Zhipu AI #h(1fr) 2023/02 -- 2025/07 \
 Software Engineer #h(1fr) Beijing, China \
