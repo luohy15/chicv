@@ -7,12 +7,6 @@
 // Set font for Chinese text
 #set text(font: ("Noto Sans CJK SC", "Noto Serif CJK SC", "Linux Libertine"))
 
-// 取消以下注释来调整文字大小
-// 推荐的简历文字大小为 `10pt` 到 `12pt`
-// #set text(
-//   size: 12pt,
-// )
-
 // 可以自由更改下面的页边距以最适合您的简历
 #set page(
   margin: (x: 0.9cm, y: 1.3cm),
@@ -50,42 +44,52 @@
 #link("https://luohy15.com")[luohy15.com] |
 #link("https://linkedin.com/in/huayiluo")[linkedin.com/in/huayiluo]
 
-== 教育背景
-#chiline()
-
-*清华大学* #h(1fr) 2015/09 -- 2019/06 \
-计算机科学与技术 工学学士 #h(1fr) 北京 \
-
 == 工作经历
 #chiline()
 
-*聆心智能* （智谱AI子公司） #h(1fr) 2023/02 -- 2025/07 \
-全栈工程师 #h(1fr) 北京 \
-- 开发了AI聊天应用的核心后端服务，具备实时聊天功能和图像/视频生成能力，处理多客户端的对话和机器人管理。
-- 构建了支持多种工作负载（GPU和CPU）的部署流水线，使同事能够无需手动干预即可部署应用。
-- 管理公司的云基础设施，保证生产环境持续可用。
+*Alpha Vantage* #h(1fr) 2025/07 -- 至今 \
+Software Engineer #h(1fr) 远程 \
+- 构建面向实时金融数据和 LLM 数据处理的云基础设施。
+- 开发 MCP 兼容的金融数据接口，服务 LLM 客户端和 Agent 工作流。
+- 将 Alpha Vantage 的 TradingAgents fork 打造成可部署的多 Agent LLM 交易分析产品，打通 Alpha Vantage 数据流、API、worker 和 web 入口。
 
-*阿里云* #h(1fr) 2021/05 -- 2022/07 \
-高级开发工程师(P6) #h(1fr) 北京 \
-- 领导开发阿里云数据库内部管理面板，优化高频慢操作。
-- 开发元数据API服务以支持 Serverless 数据库等功能，并通过从旧系统中提取通用数据库操作重写工作流服务。
+*聆心智能*，后被智谱 AI 收购 #h(1fr) 2023/02 -- 2025/07 \
+Software Engineer #h(1fr) 北京，中国 \
+- 开发 AI 聊天应用后端服务，支持实时聊天、图像/视频生成、会话和机器人管理。
+- 构建 GPU/CPU 部署流水线，让同事无需手动介入即可部署应用。
+- 管理云基础设施，并执行低停机数据库迁移，保持生产环境持续可用。
 
-*必示科技* #h(1fr) 2019/07 -- 2021/04 \
-全栈工程师 #h(1fr) 北京 \
-- 构建可重用的图表组件，用于可视化指标、日志和跟踪。
-- 为集中认证和服务路由开发API网关。
+*Alibaba Cloud* #h(1fr) 2021/05 -- 2022/07 \
+Senior Software Engineer，Cloud Database Team #h(1fr) 北京，中国 \
+- 主导开发 Alibaba Cloud 数据库内部管理面板，优化高频慢操作。
+- 开发 serverless database 元数据 API 服务，并通过抽取通用数据库操作重建工作流服务。
+
+*BizSeer Technology* #h(1fr) 2019/07 -- 2021/04 \
+Software Engineer #h(1fr) 北京，中国 \
+- 开发 AI for Ops 应用，构建可复用图表组件，用于可视化 metrics、logs 和 traces。
 
 == 开源贡献
 #chiline()
 
-*y系列 (cli/gui/server)* #link("https://github.com/luohy15/y-gui")[luohy15/y-gui] #h(1fr) 始于 2025/02 \
-- 开发了个人使用的聊天应用生态系统，包含CLI、GUI和服务器组件
-- 构建了y-gui（TypeScript网页应用）、y-cli（Python终端应用）和y-server（TypeScript），支持模型上下文协议（MCP）客户端和服务器
+*y-agent：个人 AI Agent 系统* #link("https://github.com/luohy15/y-agent")[luohy15/y-agent] #h(1fr) 始于 2025/02 \
+- 构建个人 AI agent 系统，将 coding agents 扩展到 todos、notes、calendar、links、finance、email 和知识管理等日常工作流。
+- 设计 session-tree 编排，包含 manager / dev / plan / impl / review 会话、可追踪分发、callbacks，以及可由人介入引导的长时间运行会话。
+- 实现基于技能的上下文注入、持久记忆、CLI-first 工具、Telegram / web 界面、MCP 集成，以及 OpenRouter 兼容的模型路由。
 
-*JuiceFS，贡献者* #link("https://github.com/juicedata/juicefs")[juicedata/juicefs] #h(1fr) 2021, 2023 \
-- 为JuiceFS（一个基于Redis和S3构建的分布式POSIX文件系统）做出贡献
-- 为S3和S3兼容存储实现了路径样式URL支持，升级CI工作流
+*Alpha Vantage MCP Server* #link("https://github.com/alphavantage/alpha_vantage_mcp")[alphavantage/alpha_vantage_mcp] #h(1fr) 2025 \
+- 构建官方 Alpha Vantage MCP server，使 LLM 和 Agent 工作流可通过 Model Context Protocol 访问实时与历史金融数据。
+- 设计渐进式工具发现，在保留广泛金融数据工具覆盖的同时降低 context/token 成本。
+
+*TradingAgents，Contributor* #link("https://github.com/TauricResearch/TradingAgents")[TauricResearch/TradingAgents] #h(1fr) 2025 \
+- 添加 Alpha Vantage API 集成，全面支持 stock data、technical indicators、fundamental data 和 news sentiment。
+- 重构 data provider 架构，从单体代码中抽取专用 utility modules，提升模块化程度。
+
+== 教育背景
+#chiline()
+
+*Tsinghua University* #h(1fr) 2015/09 -- 2019/06 \
+计算机科学与技术 工学学士 #h(1fr)  北京，中国 \
 
 
 // 可以随意更改下面的日期为您最后更新简历的时间
-#lastupdated("2025年7月")
+#lastupdated("2026年5月")
