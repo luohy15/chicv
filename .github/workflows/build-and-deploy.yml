@@ -63,16 +63,16 @@ jobs:
 
       - name: Build PDFs
         run: |
-          typst compile template/cv.typ cv.pdf
-          typst compile template/cv_cn.typ cv_cn.pdf
+          typst compile template/cv.typ CV_Huayi_Luo.pdf
+          typst compile template/cv_cn.typ "简历_罗华一.pdf"
 
       - name: Upload PDFs to S3
         run: |
-          aws s3 cp cv.pdf s3://$CDN_BUCKET_NAME/cv.pdf
-          aws s3 cp cv_cn.pdf s3://$CDN_BUCKET_NAME/cv_cn.pdf
+          aws s3 cp CV_Huayi_Luo.pdf s3://$CDN_BUCKET_NAME/CV_Huayi_Luo.pdf
+          aws s3 cp "简历_罗华一.pdf" "s3://$CDN_BUCKET_NAME/简历_罗华一.pdf"
 
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
             --distribution-id "$CDN_DISTRIBUTION_ID" \
-            --paths /cv.pdf /cv_cn.pdf
+            --paths /CV_Huayi_Luo.pdf /%E7%AE%80%E5%8E%86_%E7%BD%97%E5%8D%8E%E4%B8%80.pdf
